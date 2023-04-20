@@ -3,7 +3,7 @@ const { encode } = require('gpt-3-encoder')
 
 const configuration = new Configuration({
     organization: "",
-    apiKey: "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",
+    apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -19,8 +19,8 @@ async function generateText() {
             frequency_penalty: 0
         });
         const encoded = encode(prompt)
-        console.log('Cantidad de tokens en el prompt: ', encoded.length)
-        console.log(response.data);
+        console.log(`Cantidad de tokens en el prompt:${encoded.length}`);
+        console.log(`Resumen:${response.data.choices[0].text}`);
     } catch (error) {
         console.error(error);
     }
