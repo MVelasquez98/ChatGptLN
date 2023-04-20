@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "gpt-3-encoder": "^1.1.4",
+    "openai": "^3.1.0"
+  }
+}
