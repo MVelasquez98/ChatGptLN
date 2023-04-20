@@ -1,10 +1,12 @@
+require('dotenv').config();
 const { Configuration, OpenAIApi } = require("openai");
 const { encode } = require('gpt-3-encoder')
 
 const configuration = new Configuration({
     organization: "",
-    apiKey: "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",
+    apiKey: `${process.env.API_KEY}`,
 });
+console.log("KEY: " + configuration.apiKey);
 const openai = new OpenAIApi(configuration);
 
 async function generateText() {

@@ -3,6 +3,7 @@
     "dev": "node index.js"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "gpt-3-encoder": "^1.1.4",
     "openai": "^3.1.0"
   }
